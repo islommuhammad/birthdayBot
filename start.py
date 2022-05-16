@@ -36,7 +36,7 @@ nom = tupleTostr(ism)
 print(nom)
 #@bot.message_handler(commands=['start'])
 #def send_message(message):
-bot.send_photo(-321996347, photo=open('rasm.jpg', 'rb'),caption=
+bot.send_photo(-1001521695040, photo=open('/var/www/html/birthdayBot/rasm.jpg', 'rb'),caption=
     "🎂 *Tug'ilgan kuningiz bilan!!!* \n Bugun "+kun+". Ushbu kunda TATU Samarqand filialining quyidagi talabalari o'z tavallud kunlarini nishonlashmoqda:\n\n"+nom+"Ushbu tug'ilgan kun sohiblarini jamoamiz nomidan muborakbod etamiz!!! 🎉🎉🎉\n\n ©️ Copyright: @telesto\_edu", parse_mode='Markdown')
 
 #bot.infinity_polling(skip_pending = True)
