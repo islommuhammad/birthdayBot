@@ -40,6 +40,6 @@ print(nom)
 @bot.message_handler(commands=['start'])
 def command_start(message):
     bot.send_photo(-321996347, photo=open('rasm.jpg', 'rb'),caption=
-      "🎂*Tug'ilgan kuningiz bilan!!!* \n Bugun "+kun+". Ushbu kunda TATU Samarqand filialining quyidagi talabalari o'z tavallud kunlarini nishonlashmoqda:\n\n"+nom+"Ushbu tug'ilgan kun sohiblarini jamoamiz nomidan muborakbod etamiz!!! 🎉🎉🎉", parse_mode='Markdown')
+      "🎂🧭 *Tug'ilgan kuningiz bilan!!!* \n Bugun "+kun+". Ushbu kunda TATU Samarqand filialining quyidagi talabalari o'z tavallud kunlarini nishonlashmoqda:\n\n"+nom+"Ushbu tug'ilgan kun sohiblarini jamoamiz nomidan muborakbod etamiz!!! 🎉🎉🎉", parse_mode='Markdown')
 
 bot.infinity_polling(skip_pending = True)
