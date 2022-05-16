@@ -5,8 +5,12 @@ from datetime import date
 token = '5143006621:AAG_Vh1nkcWayAJZCoCHlVGbI_GxOkmVzyM'
 bot = telebot.TeleBot(token)
 
+sovga = u'\U0001F381'
+star = u'\U0001F31F'
+
 today = date.today()
 day = today.strftime("%m-%d")
+kun = today.strftime("%d-%m-%Y")
 print (day)
 
 mydb = mysql.connector.connect(
@@ -18,9 +22,9 @@ mydb = mysql.connector.connect(
 
 
 def tupleTostr(tuple):
-        res = " "
+        res = ""
         for a in tuple:
-          res += str(a)+",\n"
+          res += star+" "+str(a)+"\n\n"
         return res
 
 name = mydb.cursor()
@@ -36,6 +40,6 @@ print(nom)
 @bot.message_handler(commands=['start'])
 def command_start(message):
     bot.send_photo(-321996347, photo=open('rasm.jpg', 'rb'),caption=
-      "\nQuyidagi talabalar bugun tugulgan kunlarini nishonlamoqda: \n "+nom)
+      "🎂*Tug'ilgan kuningiz bilan!!!* \n Bugun "+kun+". Ushbu kunda TATU Samarqand filialining quyidagi talabalari o'z tavallud kunlarini nishonlashmoqda:\n\n"+nom+"Ushbu tug'ilgan kun sohiblarini jamoamiz nomidan muborakbod etamiz!!! 🎉🎉🎉", parse_mode='Markdown')
 
 bot.infinity_polling(skip_pending = True)
