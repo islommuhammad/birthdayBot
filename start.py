@@ -1,5 +1,6 @@
-import mysql.connector
+
 import telebot
+import db
 from datetime import date
 
 token = '5143006621:AAG_Vh1nkcWayAJZCoCHlVGbI_GxOkmVzyM'
@@ -14,12 +15,7 @@ day = today.strftime("%m-%d")
 kun = today.strftime("%d-%m-%Y")
 print (day)
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="",
-  database="talabalar"
-)
+
 
 
 def tupleTostr(tuple):
@@ -28,8 +24,8 @@ def tupleTostr(tuple):
           res += star+" "+str(a)+"\n\n"
         return res
 
-name = mydb.cursor()
-group = mydb.cursor()
+name = db.mydb.cursor()
+group = db.mydb.cursor()
 name.execute("SELECT Guruh, Toliq_ismi FROM students WHERE Tugilgan_sana Like '%-"+day+"'") 
 
 ism = [ x[1] for x in name.fetchall()]
